@@ -6,7 +6,7 @@
     font-size: 18px;
     border-radius: 20px;
     color: #6638d1;
-    transition: .6s; /*CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공합니다.*/ 
+    transition: .6s; 
     overflow: hidden;
     transform: translate(170%);
     padding: 25px;
