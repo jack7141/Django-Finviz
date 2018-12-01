@@ -1,0 +1,51 @@
+#btn {
+    background: none;
+    width: 240px;
+    height: 80px;
+    border: 1px solid #6638d1;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #6638d1;
+    transition: .6s; /*CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공합니다.*/ 
+    overflow: hidden;
+    transform: translate(170%);
+    padding: 25px;
+}
+#btn:focus {
+    outline: none;
+}
+#btn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+#btn:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+#btn:hover {
+    background: #7365a541;
+    cursor: pointer;
+}
+#btn:hover::after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
