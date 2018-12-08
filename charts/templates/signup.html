@@ -1,0 +1,9 @@
+ {% extends "nav.html" %}
+{% block content %}
+  <form method="post" style="padding-top: 3%">
+ <h2>Sign up</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock  %}

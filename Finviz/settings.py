@@ -25,8 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'charts',
-
+    'charts.apps.ChartsConfig',#이렇게 하는게 정석
 ]
 
 MIDDLEWARE = [
@@ -44,7 +43,7 @@ ROOT_URLCONF = 'Finviz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,3 +109,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
